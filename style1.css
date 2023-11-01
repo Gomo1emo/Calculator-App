@@ -1,0 +1,59 @@
+*, *::before, *::after {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    background: linear-gradient(to right, pink, orange);
+    margin: 0;
+    padding: 0;
+}
+
+.calculator {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    min-height: 100vh;
+}
+
+Button {
+    background-color: rgba(225, 225, 225, 0.75);
+    font-size: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(225, 225, 225, .9);
+}
+
+.output {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .75);
+    word-wrap: break-word;
+    word-break: break-all;
+    grid-column: 1 / -1;
+    padding: 10px;
+}
+
+.previous-view {
+    font-size: 1.5rem;
+    color: rgba(225, 225, 225, .75);
+}
+
+.current-view {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.span-two {
+    grid-column: span 2;
+}
